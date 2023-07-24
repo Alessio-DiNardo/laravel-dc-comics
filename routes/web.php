@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ComicsController as AdminComicsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $comics = config('db.comic');
-    //dd($comics);
-    return view('home', compact("comics"));
-})->name('home');
+Route::resource('admin/comics', AdminComicsController::class);
