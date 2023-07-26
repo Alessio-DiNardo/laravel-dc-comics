@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('comics', function (Blueprint $table) {
             $table->id();
             $table->string('title', 100);
-            $table->string('thumb', 255);
-            $table->int('price');
+            $table->string('description', 255);
+            $table->string('price', 20);
             $table->string('series', 100);
 
         });
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comics');
+        Schema::dropIfExists('new_comics');
     }
 };
