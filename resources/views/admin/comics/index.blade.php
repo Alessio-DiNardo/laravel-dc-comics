@@ -22,6 +22,7 @@
                     <th scope="col">description</th>
                     <th scope="col">price</th>
                     <th scope="col">series</th>
+                    <th scope="col">View</th>
                 </tr>
             </thead>
             <tbody>
@@ -40,6 +41,7 @@
                         <td>
                             {{ $comic->series}}
                         </td>
+                        <td><a class="btn btn-primary" href="{{route('admin.comics.show', $comic->id}}" role="button">View</a></td>
                     </tr>
                 @endforeach    
             </tbody>
