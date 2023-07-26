@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function(){return "ciao";});
+
 Route::get('admin/comics', [AdminComicsController::class, 'index'])->name('admin.comic.index');
-Route::get('admin/comics/{comic}', [AdminComicsController::class, 'show'])->name('admin.comic.show');
+Route::get('/admin/comics/create', [AdminComicController::class, 'create'])->name('admin.comic.create');
+Route::get('admin/comics/{id}', [AdminComicsController::class, 'show'])->name('admin.comic.show');
