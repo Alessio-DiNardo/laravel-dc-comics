@@ -22,7 +22,6 @@
                     <th scope="col">description</th>
                     <th scope="col">price</th>
                     <th scope="col">series</th>
-                    <th scope="col">sale_date</th>
                 </tr>
             </thead>
             <tbody>
@@ -40,9 +39,6 @@
                         </td>
                         <td>
                             {{ $comic->series}}
-                        </td>
-                        <td>
-                            {{ $comic->sale_date}}
                         </td>
                     </tr>
                 @endforeach    
